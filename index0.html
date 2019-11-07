@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+    .big-box{
+       height: 430px;
+       width: 430px;
+       
+    }
+    .white-box{
+       background-color: rgba(230, 222, 222, 0.616);
+       width: 200px;
+       height: 240px;
+       margin-left: 50px;
+       margin-top: 6px;
+       text-align: center;
+    }
+    .left{
+        background-color: rgba(128, 128, 128, 0.842);
+        width: 300px;
+        height: 300px;
+        float:left;
+        text-align: center;
+        border-color: honeydew;
+        border-radius: 15%;
+    }
+    .right{
+        background-color: rgb(70, 68, 68);
+        width: 120px;
+        height: 300px;
+        float: right;
+        text-align: center;
+        
+    }
+    .white-text{
+        color: honeydew;
+    }
+    .cool-text1{
+        font-family: Lobster;
+        font-size: 20px;
+    }
+</style>
+
+<script type="text/javascript">
+    var src;
+    function goToPage(parameter){
+        document.getElementById("mainpage").src = parameter;
+        src = parameter;
+
+    }
+</script>
+</head>
+
+<body>
+    <div class="big-box">
+    <div class="left"
+    style="background:url('img/background.jpg');background-size: 100% 100%;"> <br>
+        <div class="white-box cool-text1">
+          SmartMeter Data <br>Display    
+        </div>
+    </div>
+    <div class="right">
+        <br>
+        <a class="white-text" href="index0.html" onclick="goToPage('index0.html')">home</a>
+        <br>
+        <br>
+        <a class="white-text" href="index3.html" onclick="goToPage('index3.html')">RMS Value</a>
+        <br>
+        <br>
+        <a class="white-text" href="index4.html" onclick="goToPage('index4.html')">P&Q Power</a>
+    </div>
+    
+    </div>
+</body>
+</html>
