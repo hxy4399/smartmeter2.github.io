@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+                
+</head>
+<style>
+.yellow-box{
+    background-color: yellowgreen;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+}
+.border-box{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin: 3px;
+}
+</style>
+
+<script type="text/javascript">
+
+function change1() { 
+    
+    document.getElementById("out1").innerHTML = random_place_array1[index1++]; 
+ 
+    index1 %= random_place_array1.length; 
+ 
+} 
+
+
+    
+ 
+function stop1() { 
+ 
+    clearInterval(intervalID1); 
+ 
+} 
+ 
+var random_place_array1 = [95.4, 75.328, 900.012, 1000] 
+
+    intervalID1 = setInterval(change1, 1000), 
+
+    index1 = 0;
+
+</script>
+
+<script type="text/javascript">
+function change2() { 
+    
+    document.getElementById("out2").innerHTML = random_place_array2[index2++]; 
+ 
+    index2 %= random_place_array2.length; 
+ 
+} 
+function stop2() { 
+ 
+ clearInterval(intervalID2); 
+
+} 
+
+var random_place_array2 = [9.4, 5.328, 9.012, 10]    
+    intervalID2 = setInterval(change2, 1000),
+    index2 = 0;
+</script>
+
+
+<div class="yellow-box">
+<div class="border-box">
+    RMS Voltage:
+    <div id="out1"></div>V
+</div>
+
+<div class="border-box">
+    RMS Current:
+    <div id="out2"></div>A
+</div>
+<button onclick="stop1();">Stop1</button>
+<button onclick="stop2();">Stop2</button>
+
+</div>
